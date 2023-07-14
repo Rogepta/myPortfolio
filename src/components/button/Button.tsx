@@ -1,0 +1,41 @@
+import React from "react";
+import styled from "styled-components";
+
+type ButtonPropTypes = {
+  text: string;
+};
+
+type StyledVButtonPropsType = {
+  width?: string;
+  height?: string;
+  href?: string;
+};
+
+export const Link = (props: ButtonPropTypes & StyledVButtonPropsType) => {
+  const { text, ...propsStyled } = props;
+
+  return (
+    <div>
+      <StyledLink {...propsStyled} href={props.href} target="_blank">
+        {text}
+      </StyledLink>
+    </div>
+  );
+};
+
+export default Link;
+
+const StyledLink = styled.a<StyledVButtonPropsType>`
+  width: ${(props) => props.width || "200px"};
+  height: ${(props) => props.height || "70px"};
+  flex-shrink: 0;
+  border-radius: 83px;
+  background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+  color: white;
+  cursor: pointer;
+  padding: 10px 50px;
+  font-size: 15px;
+  font-weight: 600;
+  :hover {
+  }
+`;
