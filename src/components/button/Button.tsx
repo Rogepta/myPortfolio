@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import { font } from "../../styles/Common";
 
 type ButtonPropTypes = {
   text: string;
@@ -39,4 +40,11 @@ const StyledLink = styled.a<StyledVButtonPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${theme.media.mobile} {
+    width: 200px;
+    height: 45px;
+    font-weight: 400;
+    font-size: 15px;
+  }
 `;

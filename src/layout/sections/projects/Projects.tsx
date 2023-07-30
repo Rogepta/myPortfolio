@@ -7,6 +7,7 @@ import stroyka from "../../../assets/stroyka.png";
 import osago from "../../../assets/osago.png";
 import titan from "../../../assets/titan.png";
 import h2o from "../../../assets/h2o.png";
+import { theme } from "../../../styles/theme";
 
 const desc = {
   stroyka:
@@ -72,4 +73,19 @@ const StyledProject = styled.div`
   gap: 32px;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (max-width: 1061px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;

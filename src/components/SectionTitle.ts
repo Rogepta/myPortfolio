@@ -9,7 +9,7 @@ margin: 20px 0;
 text-align: center;
 
 @media ${theme.media.mobile} {
-   ${font({ weight: 600, Fmax: 64, Fmin: 30, family: "Poppins" })}
+   ${font({ weight: 600, Fmax: 64, Fmin: 10, family: "Poppins" })}
 
 }
 `

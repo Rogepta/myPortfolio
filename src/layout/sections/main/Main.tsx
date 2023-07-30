@@ -12,19 +12,21 @@ export const Main = () => {
     <StyledMain>
       <Container>
         <FlexWrapper justify="space-around" align="center" wrap="wrap">
-          <div>
+          <SMain>
             <SmallText>Hi There</SmallText>
             <StyledName>
               I am <span>Daniil Dergunov</span>
             </StyledName>
             <StyledDescription>a Web developer</StyledDescription>
-            <Button
-              text={"Hire me"}
-              width={"280px"}
-              height={"70px"}
-              href={"https://t.me/rogepta"}
-            />
-          </div>
+            <StyledButton>
+              <Button
+                text={"Hire me"}
+                width={"280px"}
+                height={"70px"}
+                href={"https://t.me/rogepta"}
+              />
+            </StyledButton>
+          </SMain>
 
           <PhotoWrapper>
             <Photo src={photo} alt="me" />
@@ -41,13 +43,17 @@ const StyledMain = styled.section`
   align-items: center;
 `;
 
+const SMain = styled.div`
+  padding: 0 15px;
+`;
+
 const SmallText = styled.h2`
   font-size: 14px;
   font-weight: 400;
 `;
 
 const StyledName = styled.h2`
-  ${font({ weight: 700, Fmax: 50, Fmin: 36 })}
+  ${font({ weight: 700, Fmax: 50, Fmin: 24 })}
 
   span {
     white-space: nowrap;
@@ -59,8 +65,13 @@ const StyledName = styled.h2`
 `;
 
 const StyledDescription = styled.h1`
-  ${font({ weight: 400, Fmax: 27, Fmin: 20 })}
+  ${font({ weight: 400, Fmax: 27, Fmin: 18 })}
   margin-bottom: 40px;
+`;
+
+const StyledButton = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const PhotoWrapper = styled.div`
@@ -94,6 +105,13 @@ const PhotoWrapper = styled.div`
       justify-content: center;
       margin-top: 45px;
     }
+
+    @media screen and (max-width: 769px) {
+      margin-top: 45px;
+    }
+    @media screen and (max-width: 1024px) {
+      margin-top: 45px;
+    }
   }
 `;
 
@@ -110,6 +128,13 @@ const Photo = styled.img`
   }
 
   @media ${theme.media.tablet} {
+    margin-top: 45px;
+  }
+
+  @media screen and (max-width: 769px) {
+    margin-top: 45px;
+  }
+  @media screen and (max-width: 1024px) {
     margin-top: 45px;
   }
 `;
