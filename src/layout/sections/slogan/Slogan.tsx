@@ -15,4 +15,6 @@ export const Slogan = () => {
   );
 };
 
-const StyledSlogan = styled.section``;
+const StyledSlogan = styled.section`
+  padding: 0 auto;
+`;

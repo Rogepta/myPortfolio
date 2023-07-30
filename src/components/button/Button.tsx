@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../styles/theme";
 
 type ButtonPropTypes = {
   text: string;
@@ -15,11 +16,9 @@ export const Link = (props: ButtonPropTypes & StyledVButtonPropsType) => {
   const { text, ...propsStyled } = props;
 
   return (
-    <div>
-      <StyledLink {...propsStyled} href={props.href} target="_blank">
-        {text}
-      </StyledLink>
-    </div>
+    <StyledLink {...propsStyled} href={props.href} target="_blank">
+      {text}
+    </StyledLink>
   );
 };
 
@@ -36,6 +35,8 @@ const StyledLink = styled.a<StyledVButtonPropsType>`
   padding: 10px 50px;
   font-size: 15px;
   font-weight: 600;
-  :hover {
-  }
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

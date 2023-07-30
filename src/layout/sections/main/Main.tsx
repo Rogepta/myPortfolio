@@ -11,10 +11,12 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-between" align="center" wrap="wrap">
+        <FlexWrapper justify="space-around" align="center" wrap="wrap">
           <div>
             <SmallText>Hi There</SmallText>
-            <StyledName>I am Daniil Dergunov</StyledName>
+            <StyledName>
+              I am <span>Daniil Dergunov</span>
+            </StyledName>
             <StyledDescription>a Web developer</StyledDescription>
             <Button
               text={"Hire me"}
@@ -46,12 +48,19 @@ const SmallText = styled.h2`
 
 const StyledName = styled.h2`
   ${font({ weight: 700, Fmax: 50, Fmin: 36 })}
-  letter-spacing: 1.2;
+
+  span {
+    white-space: nowrap;
+  }
+
+  @media ${theme.media.mobile} {
+    margin: 15px 0 22px;
+  }
 `;
 
 const StyledDescription = styled.h1`
   ${font({ weight: 400, Fmax: 27, Fmin: 20 })}
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 const PhotoWrapper = styled.div`

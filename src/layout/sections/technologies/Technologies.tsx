@@ -28,5 +28,4 @@ export const Technologies = () => {
 const StyledTechnologies = styled.section``;
 
 const STechnologies = styled.div`
-  padding: 20px;
 `;

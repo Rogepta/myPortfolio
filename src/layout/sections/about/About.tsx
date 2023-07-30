@@ -3,6 +3,7 @@ import { Year } from "../../../components/year/Year";
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
+import { theme } from "../../../styles/theme";
 
 const years = {
   2020: "I became interested in programming at school. Later I learned about the frontend and started learning HTML, CSS.",
@@ -27,11 +28,14 @@ export const About = () => {
   );
 };
 
-const StyledAbout = styled.section`
-
-`;
+const StyledAbout = styled.section``;
 
 const StyledDiv = styled.div`
   display: flex;
   gap: 20px;
+
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+    gap: 10;
+  }
 `;
