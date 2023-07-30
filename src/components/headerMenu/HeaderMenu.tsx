@@ -1,6 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import { Social } from "../social/Social";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -14,17 +14,25 @@ export const Menu = (props: { menuItems: Array<string> }) => {
           );
         })}
       </ul>
+      <Social />
     </StyledMenu>
   );
 };
 
 const StyledMenu = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
   ul {
     display: flex;
     gap: 60px;
     text-decoration: none;
     list-style: none;
     justify-content: center;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;
 

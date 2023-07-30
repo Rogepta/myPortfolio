@@ -1,9 +1,8 @@
 import ProgressBar from "@ramonak/react-progress-bar";
-import React from "react";
 import styled from "styled-components";
 
 type ProgressPropTypes = {
-  comleted: number;
+  completed: number;
   text: string;
 };
 
@@ -12,7 +11,7 @@ export const Progress = (props: ProgressPropTypes) => {
     <StyledProgress>
       <p>{props.text}</p>
       <ProgressBar
-        completed={props.comleted}
+        completed={props.completed}
         bgColor={
           "linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)"
         }

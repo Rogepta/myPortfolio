@@ -5,17 +5,23 @@ import { Container } from "../../../components/Container";
 import photo from "../../../assets/photo.jpg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify="space-between" align="center">
+        <FlexWrapper justify="space-between" align="center" wrap="wrap">
           <div>
             <SmallText>Hi There</SmallText>
             <StyledName>I am Daniil Dergunov</StyledName>
             <StyledDescription>a Web developer</StyledDescription>
-            <Button text={"Hire me"} width={"280px"} height={"70px"} />
+            <Button
+              text={"Hire me"}
+              width={"280px"}
+              height={"70px"}
+              href={"https://t.me/rogepta"}
+            />
           </div>
 
           <PhotoWrapper>
@@ -39,14 +45,12 @@ const SmallText = styled.h2`
 `;
 
 const StyledName = styled.h2`
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
+  ${font({ weight: 700, Fmax: 50, Fmin: 36 })}
+  letter-spacing: 1.2;
 `;
 
 const StyledDescription = styled.h1`
-  font-size: 27px;
-  font-weight: 400;
+  ${font({ weight: 400, Fmax: 27, Fmin: 20 })}
   margin-bottom: 20px;
 `;
 
@@ -69,7 +73,19 @@ const PhotoWrapper = styled.div`
     top: -15px;
     left: 12px;
     z-index: -1;
-    border-radius: 75px 0;  }
+    border-radius: 75px 0;
+
+    @media ${theme.media.mobile} {
+      width: 310px;
+      height: 430px;
+      margin-top: 45px;
+    }
+
+    @media ${theme.media.tablet} {
+      justify-content: center;
+      margin-top: 45px;
+    }
+  }
 `;
 
 const Photo = styled.img`
@@ -77,5 +93,14 @@ const Photo = styled.img`
   width: 450px;
   height: 600px;
   border-radius: 50px 0;
-  /* padding: 10px; */
+
+  @media ${theme.media.mobile} {
+    width: 310px;
+    height: 430px;
+    margin-top: 45px;
+  }
+
+  @media ${theme.media.tablet} {
+    margin-top: 45px;
+  }
 `;

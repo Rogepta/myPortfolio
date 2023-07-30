@@ -11,13 +11,13 @@ export const Technologies = () => {
       <Container>
         <STechnologies>
           <SectionTitle>Technologies</SectionTitle>
-          <Progress text={"HTML"} comleted={85} />
-          <Progress text={"CSS, Sass & Bootstrap"} comleted={85} />
-          <Progress text={"JavaScript, TypeScript"} comleted={65} />
-          <Progress text={"UI design in Figma"} comleted={60} />
-          <Progress text={"React"} comleted={60} />
-          <Progress text={"Redux, Redux Toolkit"} comleted={40} />
-          <Progress text={"Jest, Cypress"} comleted={20} />
+          <Progress text={"HTML"} completed={90} />
+          <Progress text={"CSS, Sass & Bootstrap"} completed={90} />
+          <Progress text={"JavaScript, TypeScript"} completed={70} />
+          <Progress text={"UI design in Figma"} completed={60} />
+          <Progress text={"React"} completed={60} />
+          <Progress text={"Redux, Redux Toolkit"} completed={50} />
+          <Progress text={"Jest, Cypress"} completed={35} />
         </STechnologies>
         <Additional />
       </Container>
