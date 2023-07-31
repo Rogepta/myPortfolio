@@ -5,19 +5,49 @@ import { Additional } from "../../../components/additional/Additional";
 import { Container } from "../../../components/Container";
 import { SectionTitle } from "../../../components/SectionTitle";
 
-export const Technologies = () => {
+const progressData = [
+  {
+    text: "HTML",
+    completed: 90,
+  },
+  {
+    text: "CSS, Sass & Bootstrap",
+    completed: 90,
+  },
+  {
+    text: "JavaScript, TypeScript",
+    completed: 70,
+  },
+  {
+    text: "UI design in Figma",
+    completed: 60,
+  },
+  {
+    text: "React",
+    completed: 60,
+  },
+  {
+    text: "Redux, Redux Toolkit",
+    completed: 50,
+  },
+  {
+    text: "Jest, Cypress",
+    completed: 35,
+  },
+];
+
+export const Technologies: React.FC = () => {
   return (
-    <StyledTechnologies>
+    <StyledTechnologies id="technologies">
       <Container>
         <STechnologies>
           <SectionTitle>Technologies</SectionTitle>
-          <Progress text={"HTML"} completed={90} />
-          <Progress text={"CSS, Sass & Bootstrap"} completed={90} />
-          <Progress text={"JavaScript, TypeScript"} completed={70} />
-          <Progress text={"UI design in Figma"} completed={60} />
-          <Progress text={"React"} completed={60} />
-          <Progress text={"Redux, Redux Toolkit"} completed={50} />
-          <Progress text={"Jest, Cypress"} completed={35} />
+
+          {progressData.map((p, index) => {
+            return (
+              <Progress text={p.text} completed={p.completed} key={index} />
+            );
+          })}
         </STechnologies>
         <Additional />
       </Container>
@@ -27,5 +57,4 @@ export const Technologies = () => {
 
 const StyledTechnologies = styled.section``;
 
-const STechnologies = styled.div`
-`;
+const STechnologies = styled.div``;

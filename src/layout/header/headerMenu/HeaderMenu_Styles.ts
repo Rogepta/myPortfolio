@@ -1,31 +1,42 @@
+// Menu
+
 import styled, { css } from "styled-components";
-import { theme } from "../../styles/theme";
-import { Social } from "../social/Social";
+import { theme } from "../../../styles/theme";
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
-  return (
-    <StyledMobileMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
 
-      <MobileMenuPopUp isOpen={false}>
-        <ul>
-          {props.menuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <Link href="">{item}</Link>
-              </li>
-            );
-          })}
-          <Social />
-        </ul>
-      </MobileMenuPopUp>
-    </StyledMobileMenu>
-  );
-};
+const ListItem = styled.ul`
+  display: flex;
+  gap: 60px;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+`;
 
-const StyledMobileMenu = styled.nav`
+const Link = styled.a`
+  color: ${theme.colors.font};
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`;
+
+// Desktop Menu 
+
+const DesktopMenu = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
+
+
+// Mobile Menu 
+
+const MobileMenu = styled.nav`
   display: none;
   @media ${theme.media.tablet} {
     display: block;
@@ -43,11 +54,12 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   display: none;
 
   ${(props) =>
-    props.isOpen &&
-    css<{ isOpen: boolean }>`
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     `}
 
   ul {
@@ -63,6 +75,7 @@ const MobileMenuPopUp = styled.div<{ isOpen: boolean }>`
   div {
     justify-content: center;
     align-items: center;
+    padding: 50px 0;
   }
 `;
 
@@ -99,8 +112,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(-10px);
 
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
           transform: rotate(-45deg) translateY(0);
         `}
     }
@@ -114,8 +127,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
 
       ${(props) =>
-        props.isOpen &&
-        css<{ isOpen: boolean }>`
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
           transform: rotate(45deg) translateY(0);
           width: 36px;
         `}
@@ -123,11 +136,14 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `;
 
-const Link = styled.a`
-  color: ${theme.colors.font};
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-`;
+
+
+
+export const S = {
+   ListItem,
+   Link,
+   DesktopMenu,
+   MobileMenu,
+   MobileMenuPopUp,
+   BurgerButton
+}

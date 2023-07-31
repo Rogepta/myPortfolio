@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Container } from "../../../components/Container";
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
   return (
     <StyledSlogan>
       <Container>
