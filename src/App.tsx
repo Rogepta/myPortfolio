@@ -8,6 +8,7 @@ import { Footer } from "./layout/footer/Footer";
 import { Slogan } from "./layout/sections/slogan/Slogan";
 
 function App() {
+  // следи за семантикой, и удали пустые файлы
   return (
     <div className="App">
       <Header />
