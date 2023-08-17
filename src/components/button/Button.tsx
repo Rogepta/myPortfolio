@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
-import { font } from "../../styles/Common";
 
 type ButtonPropTypes = {
   text: string;

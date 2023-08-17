@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "../icon/Icon";
 import styled from "styled-components";
-import { theme } from "../../styles/theme";
 
 export const Social = () => {
   return (
