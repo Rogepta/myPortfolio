@@ -9,7 +9,7 @@ import { Slogan } from "./layout/sections/slogan/Slogan";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
       <main>
         <Main />
@@ -19,7 +19,7 @@ function App() {
         <Slogan />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
