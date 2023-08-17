@@ -9,7 +9,7 @@ type ProjectPropTypes = {
   alt: string;
   href?: string;
 };
-
+// 2 раза типизируешь. Оставь Type только в FC
 export const Project: React.FC<ProjectPropTypes> = (
   props: ProjectPropTypes
 ) => {

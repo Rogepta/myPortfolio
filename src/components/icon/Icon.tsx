@@ -7,7 +7,9 @@ type IconPropsType = {
   width?: string;
   viewBox?: string;
 };
-
+// ОЧень странный комп - со спрайтами аккуратнее. могут баги неприятные появится
+// + не знаю можно ли их красить из css
+// Лучше в asset сделать файл index.ts и из него экспортировать иконки
 export const Icon = (props: IconPropsType) => {
   return (
     <svg

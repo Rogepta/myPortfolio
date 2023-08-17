@@ -1,7 +1,9 @@
 import React from "react";
 import { S } from "./Additional_Styles";
-
-export const Additional: React.FC = () => {
+// Не используй FC без описания пропсов!
+// Лучше юзай как написал я
+export const Additional = (): React.ReactElement => {
+  // Список можно было мапнуть (map(...)) - более декларативно
   return (
     <S.Additional>
       <S.H2Additional>Additional technologies and skills</S.H2Additional>

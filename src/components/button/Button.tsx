@@ -12,7 +12,8 @@ type StyledVButtonPropsType = {
   height?: string;
   href?: string;
 };
-
+// почему link в файле button4
+// Почему не использовал React.FC ?
 export const Link = (props: ButtonPropTypes & StyledVButtonPropsType) => {
   const { text, ...propsStyled } = props;
 
@@ -24,7 +25,7 @@ export const Link = (props: ButtonPropTypes & StyledVButtonPropsType) => {
 };
 
 export default Link;
-
+// Где то стили выносишь, а где то в 1м файле - не хорошо. Стандартизируй
 const StyledLink = styled.a<StyledVButtonPropsType>`
   width: ${(props) => props.width || "200px"};
   height: ${(props) => props.height || "70px"};

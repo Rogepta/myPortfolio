@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
 export const Social = () => {
+  // где типизация и тоже можно было мапнуть
   return (
     <StyledSocial>
       <a href="https://t.me/rogepta" target="_blank">

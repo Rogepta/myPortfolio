@@ -44,6 +44,7 @@ export const Technologies: React.FC = () => {
           <SectionTitle>Technologies</SectionTitle>
 
           {progressData.map((p, index) => {
+            // лучше содать id в массиве и его в key
             return (
               <Progress text={p.text} completed={p.completed} key={index} />
             );

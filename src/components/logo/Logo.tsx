@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "../icon/Icon";
-
+// Тоже супер непонятный комп - зачем тут ссылка
 export const Logo = () => {
   return (
     <a href="">

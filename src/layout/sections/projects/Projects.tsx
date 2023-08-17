@@ -50,6 +50,8 @@ export const Projects: React.FC = () => {
         <SectionTitle>Projects</SectionTitle>
         <S.Project>
           {projectData.map((p, index) => {
+            // понимаю что p - project, но лучше написать что то более понятное
+            // ! Почитай ЧИСТЫЙ КОД
             return (
               <Project
                 title={p.title}
