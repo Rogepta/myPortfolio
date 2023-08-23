@@ -16,6 +16,6 @@ const Copyright = styled.small`
 `;
 
 export const S = {
-   Footer,
-   Copyright
+  Footer,
+  Copyright
 }

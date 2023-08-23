@@ -4,10 +4,11 @@ import { Container } from "../../../components/Container";
 import photo from "../../../assets/photo.jpg";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { S } from "./Main_Styles";
+import Typewriter from "typewriter-effect";
 
 export const Main: React.FC = () => {
   return (
-    <S.Main>
+    <S.Main id="main">
       <Container>
         <FlexWrapper justify="space-around" align="center" wrap="wrap">
           <S.SMain>
@@ -15,7 +16,17 @@ export const Main: React.FC = () => {
             <S.Name>
               I am <span>Daniil Dergunov</span>
             </S.Name>
-            <S.Description>a Web developer</S.Description>
+            <S.Description>
+              <p>A Web Developer.</p>
+              <Typewriter
+                options={{
+                  strings: ["A Web Developer.", "A Frontend Developer."],
+                  autoStart: true,
+                  loop: true,
+                  delay: 100,
+                }}
+              />
+            </S.Description>
             <S.Button>
               <Button
                 text={"Hire me"}

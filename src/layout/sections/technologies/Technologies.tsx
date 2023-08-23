@@ -55,6 +55,8 @@ export const Technologies: React.FC = () => {
   );
 };
 
-const StyledTechnologies = styled.section``;
+const StyledTechnologies = styled.section`
+  position: relative;
+`;
 
 const STechnologies = styled.div``;

@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
 
-const About = styled.section``;
+const About = styled.section`
+`;
 
 const Div = styled.div`
   display: flex;
@@ -16,6 +17,6 @@ const Div = styled.div`
 
 
 export const S = {
-   About,
-   Div
+  About,
+  Div
 }

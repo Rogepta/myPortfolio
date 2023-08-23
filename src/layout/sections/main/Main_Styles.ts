@@ -19,6 +19,7 @@ const SmallText = styled.h2`
 
 const Name = styled.h2`
   ${font({ weight: 700, Fmax: 50, Fmin: 24 })}
+  margin: 15px 0;
 
   span {
     white-space: nowrap;
@@ -27,11 +28,15 @@ const Name = styled.h2`
   @media ${theme.media.mobile} {
     margin: 15px 0 22px;
   }
+
 `;
 
 const Description = styled.h1`
   ${font({ weight: 400, Fmax: 27, Fmin: 18 })}
   margin-bottom: 40px;
+  p {
+    display: none;
+  }
 `;
 
 const Button = styled.div`
@@ -113,12 +118,12 @@ const Photo = styled.img`
 
 
 export const S = {
-   Main,
-   SMain,
-   SmallText,
-   Name,
-   Description,
-   Button,
-   PhotoWrapper,
-   Photo
+  Main,
+  SMain,
+  SmallText,
+  Name,
+  Description,
+  Button,
+  PhotoWrapper,
+  Photo
 }

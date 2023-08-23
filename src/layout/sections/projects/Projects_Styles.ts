@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
 
-const SProject = styled.section``;
+const SProject = styled.section`
+  position: relative;
+`;
 
 const Project = styled.div`
   display: flex;
@@ -26,6 +28,6 @@ const Project = styled.div`
 `;
 
 export const S = {
-   SProject,
-   Project,
+  SProject,
+  Project,
 }

@@ -25,6 +25,7 @@ export const Link = (props: ButtonPropTypes & StyledVButtonPropsType) => {
 export default Link;
 
 const StyledLink = styled.a<StyledVButtonPropsType>`
+  position: relative;
   width: ${(props) => props.width || "200px"};
   height: ${(props) => props.height || "70px"};
   flex-shrink: 0;

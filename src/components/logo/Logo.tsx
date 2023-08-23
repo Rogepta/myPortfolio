@@ -3,7 +3,7 @@ import { Icon } from "../icon/Icon";
 
 export const Logo = () => {
   return (
-    <a href="">
+    <a href="#main">
       <Icon
         iconId={"logo"}
         width={"48px"}
